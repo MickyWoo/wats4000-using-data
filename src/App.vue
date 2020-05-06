@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <h1>Rhymesaurus: The Rhyming Thesaurus</h1>
+       <p>Rhymesaurus link.</p> <router-link to="/Rhymesaurus"> Click here </router-link>
+       <p>adjectiveSaurus link.</p> <router-link to="/adjectiveSaurus"> Click here </router-link>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'app'
+}
+</script>
 
 <style>
 #app {
