@@ -1,7 +1,7 @@
 <template>
   <div class="rhymesaurus">
      
-    <form v-on:submit.prevent="findwords"> 
+    <form v-on:submit.prevent="findWords"> 
       <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
     

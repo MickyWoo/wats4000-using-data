@@ -1,6 +1,6 @@
 <template>
   <div class="AdjectiveSaurus">
-    <form v-on:submit.prevent="findwords"> 
+    <form v-on:submit.prevent="findWords"> 
       <p>Find adjectives for <input type="text" v-model="adjective"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
     
