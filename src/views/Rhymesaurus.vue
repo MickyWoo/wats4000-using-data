@@ -1,6 +1,6 @@
 <template>
   <div class="rhymesaurus">
-     <h1>Rhymesaurus: The Rhyming Thesaurus</h1>
+     
     <form v-on:submit.prevent="findwords"> 
       <p>Find rhymes for <input type="text" v-model="rhyme"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
@@ -48,10 +48,11 @@ export default {
        axios.get('https://api.datamuse.com/words', {
         params: {
           ml: this.phrase,
-          rel_ehy: this.rhyme
+          rel_rhy: this.rhyme
         }
      })
       .then( response => {
+       
         this.results = response.data
       })
       .catch(error =>{

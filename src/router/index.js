@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Rhymesaurus from '@/views/Rhymesaurus'
-import adjectiveSaurus from '@/views/adjectiveSaurus'
+import Rhymesaurus from '@/views/Rhymesaurus.vue'
+import AdjectiveSaurus from '@/views/AdjectiveSaurus.vue'
 
 Vue.use(VueRouter)
 
@@ -12,9 +12,9 @@ Vue.use(VueRouter)
     component: Rhymesaurus
   },
   {
-    path: '/',
-    name: 'adjectiveSaurus',
-    component: adjectiveSaurus
+    path: '/AdjectiveSaurus',
+    name: 'AdjectiveSaurus',
+    component: AdjectiveSaurus
   }
 
 ]

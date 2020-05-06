@@ -1,8 +1,7 @@
 <template>
-  <div class="adjectiveSaurus">
-      <h1>AdjectiveSaurus: find adjectives </h1>
+  <div class="AdjectiveSaurus">
     <form v-on:submit.prevent="findwords"> 
-      <p>Find adjectives for <input type="text" v-model="adjectives"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
+      <p>Find adjectives for <input type="text" v-model="adjective"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
     
     <ul class="results" v-if="results.length && results > 0 " >
@@ -31,14 +30,15 @@
 
 <script>
 import axios from 'axios';
+
 export default {
-  name: 'adjectiveSaurus',
+  name: 'AdjectiveSaurus',
   data () {
     return {
       results: null,
       errors: [],
       phrase: '',
-      adjectives: ''
+      adjective: ''
     }
   },
    
@@ -47,7 +47,7 @@ export default {
        axios.get('https://api.datamuse.com/words?rel_jjb=car', {
         params: {
           ml: this.phrase,
-          rel_ehy: this.adjective
+          rel_rhy: this.adjective
         }
      })
       .then( response => {
