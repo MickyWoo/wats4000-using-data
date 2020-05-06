@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-       <p>Rhymesaurus link.</p> <router-link to="/Rhymesaurus"> Click here </router-link>
-       <p>adjectiveSaurus link.</p> <router-link to="/AdjectiveSaurus"> Click here </router-link>
+      <router-link to="/AdjectiveSaurus"> adjectiveSaurus</router-link> <p> if you want to try something else </P>
+       <router-link to="/Rhymesaurus"> Rhymesaurus</router-link> <p> if you want to go back </P>
     <router-view/>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
-  <div class="AdjectiveSaurus">
+  <div class="">
     <form v-on:submit.prevent="findWords"> 
+        <h1>AdjectiveSaurus: Adjectives for nouns</h1>
       <p>Find adjectives for <input type="text" v-model="adjective"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
     
@@ -13,7 +14,7 @@
     </ul>
 
     
-    <div class="no-results" v-else-if="results.length && results == 0">
+    <div class="no-results" v-else-if="results &&  results.length == 0">
       <h2>No Words Found</h2>
       <p>Please adjust your search to find more words.</p>
     </div>
@@ -25,6 +26,7 @@
         {{error.message}}
       </li>
     </ul>
+    <router-link to="/Rhymesaurus"> Rhymesaurus</router-link> <p> if you want to go back </P>
   </div>
 </template>
 

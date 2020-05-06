@@ -7,9 +7,10 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
+    path: '/Rhymesaurus',
     name: 'Rhymesaurus',
     component: Rhymesaurus
+    // aka home
   },
   {
     path: '/AdjectiveSaurus',
