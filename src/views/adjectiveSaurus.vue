@@ -5,7 +5,7 @@
       <p>Find adjectives for <input type="text" v-model="adjective"> related to <input type="text" v-model="phrase"> <button type="submit">Search</button></p>
     </form>
     
-    <ul class="results" v-if="results.length && results > 0 " >
+    <ul class="results" v-if=" results && results.length > 0 " >
       <!-- for-of because of array[] / for-in = objects {} -->
       <li class="item" v-for="result of results" :key="result">
         <p><strong>{{result.word}}</strong></p>
@@ -14,7 +14,7 @@
     </ul>
 
     
-    <div class="no-results" v-else-if="results &&  results.length == 0">
+    <div class="no-results" v-else-if=" results && results.length == 0">
       <h2>No Words Found</h2>
       <p>Please adjust your search to find more words.</p>
     </div>

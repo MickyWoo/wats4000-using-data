@@ -15,7 +15,7 @@
     </ul>
 
     
-    <div class="no-results" v-else-if="results.length && results == 0">
+    <div class="no-results" v-else-if="results && results.length == 0">
       <h2>No Words Found</h2>
       <p>Please adjust your search to find more words.</p>
     </div>
