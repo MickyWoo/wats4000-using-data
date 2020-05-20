@@ -7,7 +7,8 @@
     </form>
     
     <ul class="results" v-if="results && results.length > 0" >
-      <!-- for-of because of array[] / for-in = objects {} -->
+      <!-- for-of because of array[] / for-in = objects {}
+      secondary note, Results must be first in v-if so page can load properly -->
       <li class="item" v-for="result of results" :key="result">
         <p><strong>{{result.word}}</strong></p>
         <p> {{result.score}} </p>
